@@ -8,4 +8,8 @@ refs.input.addEventListener(`input`, onInputChange);
 function onInputChange(event) {
   console.log(event.currentTarget.value);
   console.log((refs.spanEl.textContent = event.currentTarget.value));
+
+  if (event.currentTarget.value === ``) {
+    refs.spanEl.textContent = `Anonymous`;
+  }
 }

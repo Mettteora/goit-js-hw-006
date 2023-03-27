@@ -9,9 +9,9 @@ formLog.addEventListener(`submit`, submitFunc);
 function submitFunc(event) {
   event.preventDefault();
   console.log(`Нажали на кнопку, форма отправилась`);
-  console.dir(`Введеный Email: ${event.currentTarget.elements.email.value}`);
+  console.dir(`Введенный Email: ${event.currentTarget.elements.email.value}`);
   console.dir(
-    `Введеный password: ${event.currentTarget.elements.password.value}`
+    `Введенный password: ${event.currentTarget.elements.password.value}`
   );
   if (event.currentTarget.elements.password.value === ``) {
     event.preventDefault();
@@ -21,4 +21,7 @@ function submitFunc(event) {
     event.preventDefault();
     alert(`Введите пожалуйста Почту`);
   }
+
+  // сбросить значения полей формы
+  event.currentTarget.reset();
 }
